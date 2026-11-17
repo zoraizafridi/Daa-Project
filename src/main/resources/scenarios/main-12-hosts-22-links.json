@@ -1,0 +1,55 @@
+{
+  "id": "main-12-hosts-22-links",
+  "name": "12 hosts / 22 links",
+  "socHostId": "soc",
+  "hosts": [
+    {"id": "soc", "name": "SOC", "riskScore": 1, "criticality": 5},
+    {"id": "host-01", "name": "Host 01", "riskScore": 1, "criticality": 2},
+    {"id": "host-02", "name": "Host 02", "riskScore": 1, "criticality": 2},
+    {"id": "host-03", "name": "Host 03", "riskScore": 1, "criticality": 2},
+    {"id": "host-04", "name": "Host 04", "riskScore": 1, "criticality": 2},
+    {"id": "host-05", "name": "Host 05", "riskScore": 1, "criticality": 2},
+    {"id": "host-06", "name": "Host 06", "riskScore": 1, "criticality": 2},
+    {"id": "host-07", "name": "Host 07", "riskScore": 1, "criticality": 2},
+    {"id": "host-08", "name": "Host 08", "riskScore": 1, "criticality": 2},
+    {"id": "host-09", "name": "Host 09", "riskScore": 1, "criticality": 2},
+    {"id": "host-10", "name": "Host 10", "riskScore": 10, "criticality": 2},
+    {"id": "host-11", "name": "Host 11", "riskScore": 9, "criticality": 2}
+  ],
+  "links": [
+    {"id": "chain-01", "sourceId": "soc", "targetId": "host-01", "cost": 1, "compromised": false},
+    {"id": "chain-02", "sourceId": "host-01", "targetId": "host-02", "cost": 2, "compromised": false},
+    {"id": "chain-03", "sourceId": "host-02", "targetId": "host-03", "cost": 3, "compromised": false},
+    {"id": "chain-04", "sourceId": "host-03", "targetId": "host-04", "cost": 4, "compromised": false},
+    {"id": "chain-05", "sourceId": "host-04", "targetId": "host-05", "cost": 5, "compromised": false},
+    {"id": "chain-06", "sourceId": "host-05", "targetId": "host-06", "cost": 6, "compromised": false},
+    {"id": "chain-07", "sourceId": "host-06", "targetId": "host-07", "cost": 7, "compromised": false},
+    {"id": "chain-08", "sourceId": "host-07", "targetId": "host-08", "cost": 8, "compromised": false},
+    {"id": "chain-09", "sourceId": "host-08", "targetId": "host-09", "cost": 9, "compromised": false},
+    {"id": "chain-10", "sourceId": "host-09", "targetId": "host-10", "cost": 10, "compromised": false},
+    {"id": "chain-11", "sourceId": "host-10", "targetId": "host-11", "cost": 11, "compromised": false},
+    {"id": "extra-01", "sourceId": "soc", "targetId": "host-02", "cost": 20, "compromised": false},
+    {"id": "extra-02", "sourceId": "soc", "targetId": "host-03", "cost": 21, "compromised": false},
+    {"id": "extra-03", "sourceId": "host-01", "targetId": "host-03", "cost": 22, "compromised": false},
+    {"id": "extra-04", "sourceId": "host-02", "targetId": "host-04", "cost": 23, "compromised": false},
+    {"id": "extra-05", "sourceId": "host-03", "targetId": "host-05", "cost": 24, "compromised": false},
+    {"id": "extra-06", "sourceId": "host-04", "targetId": "host-06", "cost": 25, "compromised": false},
+    {"id": "extra-07", "sourceId": "host-05", "targetId": "host-07", "cost": 26, "compromised": false},
+    {"id": "extra-08", "sourceId": "host-06", "targetId": "host-08", "cost": 27, "compromised": false},
+    {"id": "extra-09", "sourceId": "host-07", "targetId": "host-09", "cost": 28, "compromised": false},
+    {"id": "extra-10", "sourceId": "host-08", "targetId": "host-10", "cost": 29, "compromised": false},
+    {"id": "extra-11", "sourceId": "host-09", "targetId": "host-11", "cost": 30, "compromised": false}
+  ],
+  "teams": [
+    {"id": "team-6", "capacity": 6},
+    {"id": "team-4", "capacity": 4},
+    {"id": "team-3", "capacity": 3}
+  ],
+  "tasks": [
+    {"id": "task-host-01", "hostName": "Host 01", "effortHours": 4, "baseValue": 100, "daysUnpatched": 0},
+    {"id": "task-host-02", "hostName": "Host 02", "effortHours": 3, "baseValue": 70, "daysUnpatched": 0},
+    {"id": "task-host-03", "hostName": "Host 03", "effortHours": 2, "baseValue": 30, "daysUnpatched": 0},
+    {"id": "task-host-10", "hostName": "Host 10", "effortHours": 6, "baseValue": 100, "daysUnpatched": 2},
+    {"id": "task-host-11", "hostName": "Host 11", "effortHours": 3, "baseValue": 40, "daysUnpatched": 0}
+  ]
+}

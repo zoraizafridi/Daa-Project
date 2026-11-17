@@ -1,0 +1,26 @@
+{
+  "id": "disconnected",
+  "name": "Two components and an isolated host",
+  "socHostId": "soc",
+  "hosts": [
+    {"id": "soc", "name": "SOC", "riskScore": 1, "criticality": 5},
+    {"id": "reachable", "name": "Reachable", "riskScore": 3, "criticality": 2},
+    {"id": "remote-a", "name": "Remote A", "riskScore": 8, "criticality": 3},
+    {"id": "remote-b", "name": "Remote B", "riskScore": 6, "criticality": 2},
+    {"id": "isolated", "name": "Isolated", "riskScore": 10, "criticality": 4}
+  ],
+  "links": [
+    {"id": "soc-reachable", "sourceId": "soc", "targetId": "reachable", "cost": 1, "compromised": false},
+    {"id": "remote-pair", "sourceId": "remote-a", "targetId": "remote-b", "cost": 2, "compromised": false}
+  ],
+  "teams": [
+    {"id": "team-3", "capacity": 3},
+    {"id": "team-2", "capacity": 2},
+    {"id": "team-1", "capacity": 1}
+  ],
+  "tasks": [
+    {"id": "task-reachable", "hostName": "Reachable", "effortHours": 2, "baseValue": 25, "daysUnpatched": 0},
+    {"id": "task-remote", "hostName": "Remote A", "effortHours": 3, "baseValue": 80, "daysUnpatched": 2},
+    {"id": "task-isolated", "hostName": "Isolated", "effortHours": 1, "baseValue": 100, "daysUnpatched": 1}
+  ]
+}

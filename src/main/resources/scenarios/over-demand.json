@@ -1,0 +1,27 @@
+{
+  "id": "over-demand",
+  "name": "Fitting tasks exceed total team capacity",
+  "socHostId": "soc",
+  "hosts": [
+    {"id": "soc", "name": "SOC", "riskScore": 1, "criticality": 5},
+    {"id": "host-a", "name": "Host A", "riskScore": 4, "criticality": 2},
+    {"id": "host-b", "name": "Host B", "riskScore": 7, "criticality": 3},
+    {"id": "host-c", "name": "Host C", "riskScore": 6, "criticality": 2}
+  ],
+  "links": [
+    {"id": "soc-a", "sourceId": "soc", "targetId": "host-a", "cost": 1, "compromised": false},
+    {"id": "soc-b", "sourceId": "soc", "targetId": "host-b", "cost": 2, "compromised": false},
+    {"id": "soc-c", "sourceId": "soc", "targetId": "host-c", "cost": 3, "compromised": false}
+  ],
+  "teams": [
+    {"id": "team-3", "capacity": 3},
+    {"id": "team-2", "capacity": 2},
+    {"id": "team-1", "capacity": 1}
+  ],
+  "tasks": [
+    {"id": "task-a", "hostName": "Host A", "effortHours": 3, "baseValue": 50, "daysUnpatched": 0},
+    {"id": "task-b", "hostName": "Host B", "effortHours": 2, "baseValue": 40, "daysUnpatched": 0},
+    {"id": "task-c", "hostName": "Host C", "effortHours": 2, "baseValue": 30, "daysUnpatched": 0},
+    {"id": "task-d", "hostName": "Host C", "effortHours": 1, "baseValue": 10, "daysUnpatched": 0}
+  ]
+}

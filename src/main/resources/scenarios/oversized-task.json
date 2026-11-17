@@ -1,0 +1,24 @@
+{
+  "id": "oversized-task",
+  "name": "An oversized task alongside fitting work",
+  "socHostId": "soc",
+  "hosts": [
+    {"id": "soc", "name": "SOC", "riskScore": 1, "criticality": 5},
+    {"id": "large", "name": "Large Host", "riskScore": 10, "criticality": 4},
+    {"id": "small", "name": "Small Host", "riskScore": 3, "criticality": 2}
+  ],
+  "links": [
+    {"id": "soc-large", "sourceId": "soc", "targetId": "large", "cost": 1, "compromised": false},
+    {"id": "soc-small", "sourceId": "soc", "targetId": "small", "cost": 2, "compromised": false}
+  ],
+  "teams": [
+    {"id": "team-3", "capacity": 3},
+    {"id": "team-2", "capacity": 2},
+    {"id": "team-1", "capacity": 1}
+  ],
+  "tasks": [
+    {"id": "task-oversized", "hostName": "Large Host", "effortHours": 4, "baseValue": 100, "daysUnpatched": 3},
+    {"id": "task-fitting-a", "hostName": "Small Host", "effortHours": 2, "baseValue": 30, "daysUnpatched": 0},
+    {"id": "task-fitting-b", "hostName": "Small Host", "effortHours": 1, "baseValue": 15, "daysUnpatched": 0}
+  ]
+}
